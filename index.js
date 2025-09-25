@@ -1,10 +1,12 @@
 import expres from 'express';
+// import basices from './controller/basic.js'
 const app=expres();
 app.use(expres.json());
 app.set('view engine','ejs');
 app.get('/',(req,resp)=>{
-    resp.render("index");   
+    
 })
+
 app.post('/about',(req,resp)=>{
     const {name, email, password}= req.body;
     
