@@ -14,6 +14,9 @@ app.post('/about',(req,resp)=>{
         {name, email, password}
     )
 })
+app.use((req,res)=>{
+    res.send(" page Not found");
+});
 app.listen(4000,(res,resp)=>{
     console.log("Server start on port :4000")
 })
